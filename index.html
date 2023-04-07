@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Commissioner', sans-serif;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .nav-item:hover {
+            font-weight: 700;
+            position: relative;
+        }
+
+        .nav-item:hover > .nav-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: orange;
+            top: 55px;
+        }
+
+        @media (max-width: 992px) {
+            .nav-item:hover > .nav-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: orange;
+            top: 30px;
+            }   
+        }
+
+        .list-group-item:hover {
+            background: orange;
+            border-radius: 8px;
+        }
+
+        .list-group-item:hover > .card-text {
+            color: white !important;
+        }
+
+        .svg-icon {
+            fill:#666666 ;
+        }
+
+        .list-group-item:hover >.svg-icon {
+            fill:white ;
+        }
+        
+        .btn-custom {
+            background: orange;
+        }
+
+        .btn-custom:hover {
+            background: #292929;
+        }
+
+        .btn-white:hover {
+            background: #292929;
+            color: white !important;
+        }
+
+        .card-text.hide {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+        }
+
+        .card-text.show {
+            min-height: fit-content;
+            -webkit-line-clamp: none;
+            display: block;
+        }
+
+        
+
+    </style>
+    <title>Test task</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+            <div class="container ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex align-items-center justify-content-between gap-2">
+                    <ul class="navbar-nav" style="width:22vw">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Photos</a>
+                            <div class="nav-line"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Videos</a>
+                            <div class="nav-line"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Podcasts</a>
+                            <div class="nav-line"></div>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center justify-content-around">
+                        <form class="p-2 d-flex flex-fill justify-content-end position-relative" role="search">
+                            <svg class="svg-icon position-absolute" style="left:3%;top:35%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg>
+                            <input class="form-control me-2" type="search" placeholder="Search for anything..." aria-label="Search" style="background-color: #eeeeee;border-radius: 100px; width: 40vw; padding-left: 35px;">
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Ukrainian</a></li>
+                            </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign in</a>
+                                <div class="nav-line"></div>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>   
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container d-flex gap-5">
+            <div>
+                <ul class="list-group pt-3" style="width: 20vw;">
+                    <li class="list-group-item d-flex gap-2 align-items-center" style="border: none;">
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M4.75 3h14.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 19.25 21H4.75A1.75 1.75 0 0 1 3 19.25V4.75C3 3.784 3.784 3 4.75 3Zm14.5 1.5H4.75a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h.19l9.823-9.823a1.75 1.75 0 0 1 2.475 0l2.262 2.262V4.75a.25.25 0 0 0-.25-.25Zm.25 9.56-3.323-3.323a.25.25 0 0 0-.354 0L7.061 19.5H19.25a.25.25 0 0 0 .25-.25ZM8.5 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm0-1.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path></svg>
+                        <p class="card-text fw-bold text-secondary">All photos</p>
+                    </li>
+                    <li class="list-group-item d-flex gap-2 align-items-center" style="border: none;">
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm3.82 1.636a.75.75 0 0 1 1.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 0 1 1.222.87l-.022-.015c.02.013.021.015.021.015v.001l-.001.002-.002.003-.005.007-.014.019a2.066 2.066 0 0 1-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.331 3.331 0 0 1-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 0 1 .183-1.044ZM12 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM5 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5.25 2.25.592.416a97.71 97.71 0 0 0-.592-.416Z"></path></svg>
+                        <p class="card-text fw-bold text-secondary" >Selfies</p>
+                    </li>
+                    <li class="list-group-item d-flex gap-2 align-items-center" style="border: none;">
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+                        <p class="card-text fw-bold text-secondary">Recent</p>
+                    </li>
+                    <li class="list-group-item d-flex gap-2 align-items-center" style="border: none;">
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M11 1.75V3h2.25a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H5V1.75C5 .784 5.784 0 6.75 0h2.5C10.216 0 11 .784 11 1.75ZM4.496 6.675l.66 6.6a.25.25 0 0 0 .249.225h5.19a.25.25 0 0 0 .249-.225l.66-6.6a.75.75 0 0 1 1.492.149l-.66 6.6A1.748 1.748 0 0 1 10.595 15h-5.19a1.75 1.75 0 0 1-1.741-1.575l-.66-6.6a.75.75 0 1 1 1.492-.15ZM6.5 1.75V3h3V1.75a.25.25 0 0 0-.25-.25h-2.5a.25.25 0 0 0-.25.25Z"></path></svg>
+                        <p class="card-text fw-bold text-secondary">Deleted</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column">
+                <div class="d-flex flex- justify-content-between align-items-center">
+                    <div class="d-flex flex-column">
+                        <p class="fs-1">All photos</p>
+                        <p class="fw-bold lh-sm text-secondary">150 items</p>
+                    </div>
+                    <div class="btn-group btn-group-lg ms-auto" role="group" aria-label="Large button group">
+                        <button type="button" class="btn btn-outline-dark fw-bold">Newest</button>
+                        <button type="button" class="btn btn-outline-dark fw-bold">Latest</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-3"  >
+                <div class="d-flex flex-row gap-3">
+                    <div class="card" style="width: 30vw;">
+                        <img src="https://picsum.photos/id/8/5000/3333" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title fs-2 fw-bold text-dark">Heading</h5>
+                          <p class="card-text text-secondary">Here goes some sample, example text that is relatively short.</p>
+                          <a class="btn btn-ordinary show-more fw-bold text-start mb-2" style="display: none;">Show More...</a>
+                          <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <a href="#" class="btn btn-custom fw-bold text-white" style="width: fit-content;">Save to collection</a>
+                            <a href="#" class="btn btn-white border fw-bold" style="width: fit-content;">Share</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 30vw;">
+                        <img src="https://picsum.photos/id/8/5000/3333" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column ">
+                          <h5 class="card-title fs-2 fw-bold text-dark">Heading</h5>
+                          <p class="card-text text-secondary">And here full text doesn’t fit, and at the very end of it we should show a Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, iusto?</p>
+                          <a class="btn btn-ordinary show-more fw-bold text-start mb-2" style="display: none;">Show More...</a>
+                          <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <a href="#" class="btn btn-custom fw-bold text-white" style="width: fit-content;">Save to collection</a>
+                            <a href="#" class="btn btn-white border fw-bold" style="width: fit-content;">Share</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row gap-3">
+                    <div class="card" style="width: 30vw;">
+                        <img src="https://picsum.photos/id/8/5000/3333" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column ">
+                          <h5 class="card-title fs-2 fw-bold text-dark">Heading</h5>
+                          <p class="card-text text-secondary">Here goes some sample, example text that is relatively short.</p>
+                          <a class="btn btn-ordinary show-more fw-bold text-start mb-2" style="display: none;">Show More...</a>
+                          <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <a href="#" class="btn btn-custom fw-bold text-white" style="width: fit-content;">Save to collection</a>
+                            <a href="#" class="btn btn-white border fw-bold" style="width: fit-content;">Share</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 30vw;">
+                        <img src="https://picsum.photos/id/8/5000/3333" class="card-img-top" alt="...">
+                        <div class="card-body d-flex flex-column">
+                          <h5 class="card-title fs-2 fw-bold text-dark">Heading</h5>
+                          <p class="card-text text-secondary">And here full text doesn’t fit, and at the very end of it we should show a Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deserunt aliquid vitae? Iste animi, provident totam quia doloribus recusandae quaerat veniam sapiente aperiam tempora unde perspiciatis voluptatem, optio atque nam temporibus expedita. Esse accusamus eos velit unde fugiat saepe quas?</p>
+                          <a class="btn btn-ordinary show-more fw-bold text-start mb-2" style="display: none;">Show More...</a>
+                          <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <a href="#" class="btn btn-custom fw-bold text-white" style="width: fit-content;">Save to collection</a>
+                            <a href="#" class="btn btn-white border fw-bold" style="width: fit-content;">Share</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </div> 
+    </main>
+
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        function toggleButtons() {
+        let containers = document.querySelectorAll(".card-body");
+
+        for (let i = 0; i < containers.length; i++) {
+            let container = containers[i];
+            let text = container.querySelector(".card-text");
+            let toggleBtn = container.querySelector(".show-more");
+            let lineHeight = parseInt(window.getComputedStyle(text).getPropertyValue("line-height"));
+            let height = text.offsetHeight;
+            let isMoreThanTwoLines = height > (2 * lineHeight);
+
+            if (isMoreThanTwoLines) {
+                text.classList.toggle("hide");
+                toggleBtn.style.display = "block";
+                toggleBtn.addEventListener("click", function() {
+                    text.classList.toggle("show");
+                    toggleBtn.innerHTML = text.classList.contains("show");
+                    toggleBtn.style.display = "none";
+                });
+            } else {
+                console.log(toggleBtn + '[2]')
+                toggleBtn.style.display = "none";
+            }
+        }
+        }
+
+        toggleButtons();
+
+    </script>
+</body>
+</html>
